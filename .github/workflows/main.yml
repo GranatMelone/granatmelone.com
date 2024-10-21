@@ -1,0 +1,24 @@
+name: Deploy to Strato Webspace via SFTP
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install LFTP
+        run: sudo apt-get install lftp
+
+      - name: Deploy files via SFTP
+        run: |
+          lftp -c "
+          open -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASS }} ${{ secrets.SFTP_HOST }};
+          mirror -R ./ --delete --verbose
+          "
