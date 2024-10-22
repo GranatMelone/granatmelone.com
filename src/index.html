@@ -7,8 +7,9 @@
         <link href="./output.css" rel="stylesheet">
         <title>The Loading zone</title>
     </head>
-    <body class="h-screen flex items-center justify-center">
-        <div id="alert" role="alert" class="alert fixed top-0 left-0 w-full flex justify-center">
+    <body class="h-screen flex-wrap items-center justify-center cursor-progress">
+        <div id="alert" role="alert"
+            class="alert fixed top-0 left-0 w-full flex justify-center">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -24,12 +25,13 @@
                 all.</span>
             <div>
                 <button id="deny_btn" class="btn btn-sm">Don't Care</button>
-                <button id="accept_btn"class="btn btn-sm btn-primary">Okay</button>
+                <button id="accept_btn"
+                    class="btn btn-sm btn-primary">Okay</button>
             </div>
         </div>
 
         <div id="loading__content"
-            class="text-center items-center justify-center">
+            class="text-center items-center justify-center w-full">
             <h1 id="loading__title" class="text-3xl font-bold">Welcome to
                 granatmelone.com — Almost There!</h1>
             <progress id="progress_bar" class="progress w-56" value="0"
@@ -50,11 +52,14 @@
             </div>
             <br>
             <progress class="progress w-56"></progress>
-            <p id="loading__description" class="text-sm">This is a loading
+            <p id="loading__description" class="text-sm mb-96">This is a loading
                 screen. It's not much, but it's honest work.</p>
-            <br>
-            <footer class="mt-8 text-primary">
-                <p>If you've made it this far, congrats! You're one of the
+            <br class="mb-96">
+        </div>
+        <div id="footer" class="mt-96 bottom-0 object-bottom justify-center text-center">
+            <footer class="mt-96 text-primary">
+                <p class="mt-96">If you've made it this far, congrats!
+                    You're one of the
                     patient ones.</p>
             </footer>
         </div>
