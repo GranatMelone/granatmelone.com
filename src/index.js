@@ -91,6 +91,20 @@ document.addEventListener("DOMContentLoaded", function() {
     setRandomInterval();
 });
 
+//Event Listener to place the footer at the bottom of the page when the content is not enough
+document.addEventListener("DOMContentLoaded", function() {
+    const footer = document.getElementById("footer");
+    const footerHeight = footer.offsetHeight;
+    const body = document.body;
+    const html = document.documentElement;
+    const windowHeight = window.innerHeight;
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    if (docHeight < windowHeight) {
+        footer.classList.add("absolute", "bottom-0", "w-full");
+    }
+});
+
+
 // Event listeners for the accept and deny buttons
 document.getElementById("deny_btn").addEventListener("click", () => {
     document.getElementById("deny_btn").className = "btn btn-error";

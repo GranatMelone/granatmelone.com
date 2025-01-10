@@ -10,6 +10,9 @@ Welcome to granatmelone.com! This is just a simple fun website to get to know Ta
 The main purpose of this website is for me to experiment with Tailwind CSS and Daisy UI while creating a visually appealing landing page.
 Maybe other Software will be added in the future.
 
+## How to Tailwind:
+`` npx tailwindcss -i ./src/index.css -o ./src/output.css --watch `` 
+
 
 ## License
 This project is licensed under the MIT License.

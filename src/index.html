@@ -1,62 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="./index.js" defer></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./output.css" rel="stylesheet">
-        <title>The Loading zone</title>
-    </head>
-    <body class="h-screen flex items-center justify-center">
-        <div id="alert" role="alert" class="alert fixed top-0 left-0 w-full flex justify-center">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="stroke-info h-6 w-6 shrink-0">
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span>This site doesn't use cookies. The Cookie-Monster ate them
-                all.</span>
-            <div>
-                <button id="deny_btn" class="btn btn-sm">Don't Care</button>
-                <button id="accept_btn"class="btn btn-sm btn-primary">Okay</button>
-            </div>
-        </div>
 
-        <div id="loading__content"
-            class="text-center items-center justify-center">
-            <h1 id="loading__title" class="text-3xl font-bold">Welcome to
-                granatmelone.com — Almost There!</h1>
-            <progress id="progress_bar" class="progress w-56" value="0"
-                max="100"></progress>
-            <br>
-            <span class="loading loading-infinity loading-lg"></span>
-            <p id="loading_text">Loading...</p>
-            <br>
-            <div class="flex flex-col items-center">
-                <div class="flex w-52 h-16 items-center gap-4">
-                    <div id="round_btn_skeleton"
-                        class="skeleton h-16 w-24"></div>
-                    <div class="flex flex-col gap-4">
-                        <div id="text_skeleton1"
-                            class="skeleton h-16 w-20"></div>
-                    </div>
+<head>
+    <script src="./index.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>The Loading zone</title>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <div id="alert" role="alert" class="alert w-full flex justify-center bg-blue-90 p-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info h-6 w-6 shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="ml-2">This site doesn't use cookies. The Cookie-Monster ate them all.</span>
+        <div class="ml-4">
+            <button id="deny_btn" class="btn btn-sm">Don't Care</button>
+            <button id="accept_btn" class="btn btn-sm btn-primary">Okay</button>
+        </div>
+    </div>
+
+    <div id="loading__content" class="flex-grow flex flex-col items-center justify-center text-center">
+        <h1 id="loading__title" class="text-3xl font-bold my-8">Welcome to granatmelone.com — Almost There!</h1>
+        <progress id="progress_bar" class="progress w-56 mt-4" value="0" max="100"></progress>
+        <span class="loading loading-infinity loading-lg mt-4"></span>
+        <p id="loading_text" class="mt-4">Loading...</p>
+        <div class="flex flex-col items-center mt-4">
+            <div class="flex w-52 h-16 items-center gap-4">
+                <div id="round_btn_skeleton" class="skeleton h-16 w-24"></div>
+                <div class="flex flex-col gap-4">
+                    <div id="text_skeleton1" class="skeleton h-16 w-20"></div>
                 </div>
             </div>
-            <br>
-            <progress class="progress w-56"></progress>
-            <p id="loading__description" class="text-sm">This is a loading
-                screen. It's not much, but it's honest work.</p>
-            <br>
-            <footer class="mt-8 text-primary">
-                <p>If you've made it this far, congrats! You're one of the
-                    patient ones.</p>
-            </footer>
         </div>
-    </body>
+        <progress class="progress w-56 mt-4"></progress>
+        <p id="loading__description" class="text-sm mt-4">This is a loading screen. It's not much, but it's honest work.</p>
+    </div>
+
+    <footer class="w-full text-center text-primary p-4">
+        <p>If you've made it this far, congrats! You're one of the patient ones.</p>
+    </footer>
+</body>
+
 </html>
